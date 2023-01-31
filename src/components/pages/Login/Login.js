@@ -1,8 +1,9 @@
 import React from 'react';
 import style from './Login.module.scss'
-import Input from "../../Input/Input";
-import Button from "../../Button/Button";
+import Input from "../../common/Input/Input";
+import Button from "../../common/Button/Button";
 import Logo from '../../../image/itecLogo.png'
+import {NavLink} from "react-router-dom";
 
 const Login = () => {
     return (
@@ -13,7 +14,9 @@ const Login = () => {
             <form method={'POST'} className={style.loginForm}>
                 <Input placeholder={'Введите логин'}/>
                 <Input placeholder={'Введите пароль'}/>
-                <Button text={'Войти'}/>
+                <NavLink to={'/home'}>
+                    <Button text={'Войти'}/>
+                </NavLink>
             </form>
         </div>
     );
