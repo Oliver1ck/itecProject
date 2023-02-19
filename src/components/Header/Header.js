@@ -6,7 +6,7 @@ import headerAvatar from '../../image/headerProfileAvatar.png'
 
 const Header = () => {
     return (
-        <div className={style.header}>
+        <header className={style.header}>
             <div className={style.headerWrapper}>
                 <div className={style.headerAction}>
                     <NavLink to={'/'}>
@@ -21,7 +21,7 @@ const Header = () => {
                     </div>
                 </NavLink>
             </div>
-        </div>
+        </header>
     );
 };
 

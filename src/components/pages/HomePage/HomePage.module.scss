@@ -1,8 +1,69 @@
-.homePage{
+.homePage {
   display: flex;
   flex-direction: column;
 
 }
-.homePageWrapper{
+
+.homePageWrapper {
   display: flex;
 }
+
+.title {
+  font-family: IBMPlexSans;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 24px;
+  color: black;
+  line-height: 120%;
+  margin-bottom: 40px;
+}
+
+.newLesson {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: #D5EBE9;
+  border-radius: 10px;
+  margin-bottom: 40px;
+}
+
+.lessonItem {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 10px 15px;
+  background: #09A598;
+  border-radius: 10px;
+  font-family: IBMPlexSans;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 18px;
+  color: white;
+  line-height: 120%;
+  cursor: pointer;
+}
+
+.imgWrap {
+  width: 25px;
+  height: 25px;
+
+  & img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.lessonText {
+  font-family: IBMPlexSans;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 16px;
+  color: #606F6C;
+  line-height: 120%;
+}
+.lessonsListWrap{
+
+}
+
+

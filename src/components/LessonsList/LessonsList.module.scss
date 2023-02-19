@@ -1,0 +1,56 @@
+.list {
+  display: flex;
+  flex-direction: column;
+}
+
+.listItem {
+  background: #83F8F0;
+  display: flex;
+  padding: 10px 20px;
+}
+
+.listItemAbout {
+  display: flex;
+  gap: 15px;
+}
+
+.status {
+  & img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.imgWrap {
+  & img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.about {
+  display: flex;
+  gap: 5px;
+}
+
+.text {
+  font-family: IBMPlexSans;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 16px;
+  color: #606F6C;
+  line-height: 120%;
+}
+
+.listTitle {
+  font-family: IBMPlexSans;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 16px;
+  color: black;
+  line-height: 120%;
+  padding-left: 20px;
+  margin-bottom: 20px;
+}

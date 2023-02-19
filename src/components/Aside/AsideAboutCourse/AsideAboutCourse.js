@@ -1,4 +1,4 @@
-import React, {useEffect, useRef, useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import style from './AsideAboutCourse.module.scss'
 import asidePhoto from '../../../image/asidePhoto.jpg'
 import contentCourseIcon from '../../../image/icons/contentCourseIcon.svg'
@@ -6,7 +6,7 @@ import contentCourseIconActive from '../../../image/iconsActive/contentCourseIco
 import personal from '../../../image/icons/Personnel.svg'
 import {NavLink} from "react-router-dom";
 
-const AsideAboutCourse = () => {
+const AsideAboutCourse = ({setContent, setYoda}) => {
 
     const [imageState,setImageState] = useState(false)
 
@@ -33,23 +33,20 @@ const AsideAboutCourse = () => {
             <div className={style.asideService}>
                 <ul className={style.asideServiceList}>
                     <li className={style.asideListItem}>
-                        <NavLink to={'/'}>
-                            <div className={style.asideListItemWrapper} onMouseOver={(e) => {
-                                setImageState(true)
-                                console.log(imageState)
-                            }}>
+                        <div className={style.asideListItemWrapper} onClick={() => { setContent(true); setYoda(false) }} onMouseOut={() => setImageState(false)} onMouseOver={(e) => {setImageState(true)}}>
                                 <div className={style.listItemImage}>
-                                    <img src={contentCourseIcon} alt={contentCourseIcon}/>
+                                    <img src={imageState ? contentCourseIconActive : contentCourseIcon} alt={contentCourseIcon}/>
                                 </div>
                                 <div className={style.listItemTitle}>
                                     Содержание курса
                                 </div>
                             </div>
-                        </NavLink>
                     </li>
                     <li className={style.asideListItem}>
-                        <NavLink to={'/'}>
-                            <div className={style.asideListItemWrapper}>
+                        <div className={style.asideListItemWrapper} onClick={() => {
+                            setYoda(true);
+                            setContent(false)
+                        }}>
                                 <div className={style.listItemImage}>
                                     <img src={personal} alt={personal}/>
                                 </div>
@@ -57,7 +54,6 @@ const AsideAboutCourse = () => {
                                     Твой YODA
                                 </div>
                             </div>
-                        </NavLink>
                     </li>
                 </ul>
             </div>
